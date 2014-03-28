@@ -20,10 +20,10 @@ public class ClassWithGroovyFeaturesLikeCompilkeStaticTest {
 
   @Test
   public void testNothingJustItCompiles() {
-    Object check = null;
+    Object check;
     try {
       check = testerObject.getName("input");
-    } catch (Exception runtime) {
+    } catch (RuntimeException runtime) {
       // look ClassWithGroovyFeaturesLikeCompilkeStatic
       // to force a runtime exception
       LOGGER.error("RUNTIME EXCEPTION (compilation was OK)", runtime);
